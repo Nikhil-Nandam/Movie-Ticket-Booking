@@ -28,6 +28,15 @@ label {
     padding: 20px;
     cursor: pointer;
     width: 100%;
+    /* box-sizing: border-box; */
+}
+
+#submit:hover {
+    border: 2px solid rgb(229, 83, 103);
+    background-color: white;
+    color:rgb(229, 83, 103);
+    transition: 0.5s;
+    /* box-sizing: border-box; */
 }
 
 .container {
