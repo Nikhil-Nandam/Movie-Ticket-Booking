@@ -12,17 +12,30 @@
     <div class="container">
         <h1 id="signuph1">Login
             <i class="fa fa-lock"></i>
-        <!-- <img src="images/lock.png" alt="lock" width="25px" height="25px"> -->
         </h1>
         <div class="smaller_container">
-            <form action="">
+            <form name="login-form" action="" onsubmit="sub(); return false;">
                 <label for="" name="">Email Address</label>
-                <input class="field" type="email" placeholder="Email Address"><br>
+                <input class="field" type="email" placeholder="Email Address" name="email" required><br>
                 <label for="" name="">Password</label>
-                <input class="field" type="password" placeholder="Password"><br>
+                <input class="field" type="password" placeholder="Password" required><br>
                 <input id="submit" type="submit" value="Login">
             </form>
         </div>
     </div>
+    <script>
+        window.onload = function() {
+            document.querySelector("input").focus();
+        }
+
+        function sub() {
+            var inputs = document.querySelectorAll("input");
+            var email_address = inputs[0].value;
+            var password = inputs[1].value;
+            console.log("Email_Address: " + email_address);
+            console.log("Password: " + password);
+        }
+
+    </script>
 </body>
 </html>
