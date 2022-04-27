@@ -31,6 +31,10 @@ body{
     display: flex;
 }
 
+.row_ {
+    font-family: 'Lucida Console', monospace;
+}
+
 .movie-container{
     margin: 20px 0px;
 }
@@ -84,6 +88,7 @@ body{
 .showcase li small{
     margin-left: 10px;
 }
+
 .row-6 {
     margin-bottom: 18px;
 }
@@ -103,5 +108,7 @@ p.text {
     margin: 5px 0;
 }
 p.text span{
-    color:black;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
 }
