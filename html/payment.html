@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking-Payment Details</title>
+    <link rel="icon" type="jpg/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+    
+    <div class="payment-page">
+        <div class="show-title">
+            <h1>Faneeha Shows</h1>
+        </div>
+        <div class="contact-details " onclick="showContact()">
+            <h2><i class="fa-solid fa-angle-down"></i> Share your Contact Details </h2>
+            <div id="wrapper" hidden >
+                <div id="contact">
+                    <input type="email" placeholder="Email Address">
+                    <input type="text" placeholder="Phone Number">
+                    <button>Continue</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="payment-options">
+            <h2><i class="fa-solid fa-angle-down"></i> Payment Options </h2>
+            <div id="payment">
+                
+            </div>
+        </div>
+        
+    </div>
+    <script src="../javascript/payment.js"></script>
+</body>
+</html>
