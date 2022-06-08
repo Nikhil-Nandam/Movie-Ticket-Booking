@@ -11,32 +11,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/payment.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-    
+    <div class="navbar">
+        <div class="container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Services</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+        </div>
+    </div>
     <div class="payment-page">
         <div class="show-title">
             <h1>Faneeha Shows</h1>
         </div>
-        <div class="contact-details " onclick="showContact()">
-            <h2><i class="fa-solid fa-angle-down"></i> Share your Contact Details </h2>
+        <div class="contact-details " >
+            <h2 onclick="showContact()" ><i class="fa-solid fa-angle-down"></i> Share your Contact Details </h2>
             <div id="wrapper" hidden >
                 <div id="contact">
                     <input type="email" placeholder="Email Address">
                     <input type="text" placeholder="Phone Number">
-                    <button>Continue</button>
+                    <button class="Button">Continue</button>
                 </div>
             </div>
 
         </div>
         <div class="payment-options">
-            <h2><i class="fa-solid fa-angle-down"></i> Payment Options </h2>
+            <h2 style="padding-bottom: 0;"><i class="fa-solid fa-angle-down" ></i> Payment Options </h2>
             <div id="payment">
-                
+                <div class="options" id="option">
+                    <h3 onclick="showNetBank()">Net Banking</h3>
+                    <h3>Credit/Debit Cards</h3>
+                    <h3>UPI</h3>
+                    <h3>Mobile Wallets</h3>
+                </div>
+                <div class="option-details">
+                    <div id="net-banking" hidden>
+                        <input type="radio" id="axis" value="Axis Bank" name="Banks">
+                        <label for="axis"><img src="../images/Axis.jpeg" alt=""></label>
+                        <input type="radio" id="BOI" value="BOI" name="Banks">
+                        <label for="BOI"><img src="../images/BOI.jpeg" alt=""></label><br>
+                        <input type="radio" id="HDFC" value="HDFC" name="Banks">
+                        <label for="HDFC"><img src="../images/HDFC.jpeg" style="height: 40px; padding-bottom: 40px;" alt=""></label>
+                        <input type="radio" id="SBI" value="SBI Bank" name="Banks">
+                        <label for="SBI"><img src="../images/SBI.jpeg" alt=""></label>
+                        <button class="Button">Make Payment</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        
+        </div> 
     </div>
-    <script src="../javascript/payment.js"></script>
+    <script src="../js/payment.js"></script>
 </body>
 </html>

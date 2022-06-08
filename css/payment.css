@@ -10,6 +10,9 @@ body{
     background-color: whitesmoke;
     font-family: "Dosis",sans-serif;
 }
+h2{
+    padding-bottom: 0;
+}
 .payment-page{
     padding: 30px 20px;
 }
@@ -45,7 +48,7 @@ body{
     padding: 30px 10px;
     background-color: white;
 }
-#contact button{
+.Button{
     cursor: pointer;
     height: 40px;
     width: 170px;
@@ -56,7 +59,7 @@ body{
     outline: none;
     background-color: rgb(229, 83, 103);
 }
-#contact button:hover{
+.Button:hover{
     background-color: rgb(224, 49, 72);
 }
 input{
@@ -64,4 +67,32 @@ input{
     height: 38px;
     outline: none;
     border-color: var(--primary_color);
+}
+.options{
+    background-color: rgb(238, 232, 232);
+    color: black;
+    width: 20%;
+    padding: 0px 0 5px 40px;
+}
+#payment{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.options h3:hover{
+    color: rgba(139, 108, 108,0.8);
+    cursor: pointer;
+}
+#net-banking{
+    width:90%;
+    text-align: center;
+}
+.option-details img{
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+}
+
+.option-details input{
+    margin: 10px 10px 30px;
 }
