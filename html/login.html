@@ -15,11 +15,11 @@
             <i class="fa fa-lock"></i>
         </h1>
         <div class="smaller_container">
-            <form name="login-form" action="" onsubmit="sub(); return false;">
+            <form name="login-form" action="../php/login.php" method="post">
                 <label for="" name="">Email Address</label>
                 <input class="field" type="email" placeholder="Email Address" name="email" required><br>
                 <label for="" name="">Password</label>
-                <input class="field" type="password" placeholder="Password" required><br>
+                <input class="field" type="password" placeholder="Password" name="password" required><br>
                 <input id="submit" type="submit" value="Login">
             </form>
         </div>

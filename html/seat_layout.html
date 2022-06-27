@@ -20,6 +20,7 @@
                 <option value="180">Bheemla Nayak(<span>&#8377;180</span>)</option>
             </select>
         </div> -->
+
         <ul class="showcase">
             <li>
                 <div id="avail" class="seat"></div>
@@ -190,6 +191,9 @@
         <p class="text">
             You have selected <span id="count">0</span> seats for a price of &#8377; <span id="total">0</span>
         </p>
-        <script src="seat_layout.js"></script>
+        <form id='form' name="seat-layout-form" action="../php/seat_layout.php" method="post" hidden>
+            <input id="submit" type="submit" value="Book Tickets" >
+        </form>
+        <script src="../js/seat_layout.js"></script>
     </body>
 </html>

@@ -42,16 +42,18 @@
 
         </div>
         <div class="payment-options">
-            <h2 style="padding-bottom: 0;"><i class="fa-solid fa-angle-down" ></i> Payment Options </h2>
-            <div id="payment">
+            <h2 onclick="showPayment()"><i class="fa-solid fa-angle-down" ></i> Payment Options </h2>
+            <div id="payment" hidden>
+            <div id="payment-section">
                 <div class="options" id="option">
                     <h3 onclick="showNetBank()">Net Banking</h3>
-                    <h3>Credit/Debit Cards</h3>
-                    <h3>UPI</h3>
-                    <h3>Mobile Wallets</h3>
+                    <h3 onclick="showCreditDebit()">Credit/Debit Cards</h3>
+                    <h3 onclick="showUpi()">UPI</h3>
+                    <h3 onclick="showWallet()">Mobile Wallets</h3>
                 </div>
                 <div class="option-details">
                     <div id="net-banking" hidden>
+                        <h3 style="color: black ;">Pay Using Net Banking</h3>
                         <input type="radio" id="axis" value="Axis Bank" name="Banks">
                         <label for="axis"><img src="../images/Axis.jpeg" alt=""></label>
                         <input type="radio" id="BOI" value="BOI" name="Banks">
@@ -62,9 +64,54 @@
                         <label for="SBI"><img src="../images/SBI.jpeg" alt=""></label>
                         <button class="Button">Make Payment</button>
                     </div>
-                </div>
+                    <div id="UPI" hidden>
+                        <h3 style="color: black ;">Pay using UPI</h3>
+                        <input type="radio" name="UPI" id="Gpay" value="Gpay UPI">
+                        <label for="Gpay"><img src="../images/gpay.jpeg" alt=""></label>
+                        <input type="radio" name="UPI" id="Phonepe" value="Phonepe UPI">
+                        <label for="Phonepe"><img src="../images/phonepe.jpeg" alt="" style="height: 40px; padding-bottom: 40px;"></label><br>
+                        <input type="radio" name="UPI" id="paytm" value="paytm UPI">
+                        <label for="paytm"><img src="../images/paytm.jpeg" alt="" style="height: 40px; padding-bottom: 40px;"></label>
+                        <input type="radio" name="UPI" id="amazon_pay" value="amazon_pay UPI">
+                        <label for="amazon_pay"><img src="../images/amazon_pay.jpeg" alt=""></label>
+                        <button class="Button">Make Payment</button>
+                    </div>
+                    <div id="wallet" style="text-align: center;" hidden>
+                        <h3 style="color: black ;">Pay using Mobile Wallets</h3>
+                        <input type="radio" name="UPI" id="paytm" value="paytm UPI">
+                        <label for="paytm"><img src="../images/paytm.jpeg" alt="" style="height: 40px; padding-bottom: 40px;"></label>
+                        <input type="radio" name="UPI" id="Phonepe" value="Phonepe UPI">
+                        <label for="Phonepe"><img src="../images/phonepe.jpeg" alt="" style="height: 40px; padding-bottom: 40px;"></label>
+                        <input type="radio" name="UPI" id="amazon_pay" value="amazon_pay UPI">
+                        <label for="amazon_pay"><img src="../images/amazon_pay.jpeg" alt=""></label><br>
+                        <button class="Button" >Make Payment</button>
+                    </div>
+                    <div id="credit-debit" hidden style="padding-left: 50%; text-align: center;">
+                        <h3 style="color: black;">Enter your card details</h3>
+                        <div id="card-details">
+                            <form>
+                                <!-- <label for="card-number">Card Number</label> -->
+                                <input id="card-number" type="text" placeholder="Enter Your Card Number"><br>
+                                <!-- <label for="card-name">Card Name</label> -->
+                                <input id="card-name" type="text" placeholder="Name on the Card"><br>
+                                <label for="expiry" style="color: black; margin-left: -70%;">Expiry</label>
+                                <div id="expiry-cvv">
+                                    <div id="expiry">
+                                        <input type="text" placeholder="MM">
+                                        <input type="text" placeholder="YY">
+                                    </div>
+                                    <input id="cvv" type="text" placeholder="C V V">
+                                </div>
+                            </form>
+                        </div>
+                        <br>
+                        <br>
+                        <button style="margin-left: 10px;" class="Button">Make Payment</button>
+                    </div>
             </div>
-        </div> 
+        </div>
+    </div>
+</div>
     </div>
     <script src="../js/payment.js"></script>
 </body>
