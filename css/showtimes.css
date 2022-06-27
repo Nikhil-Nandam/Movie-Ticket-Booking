@@ -61,7 +61,7 @@ p {
     font-size: 25px;
 }
 
-.btn1 {
+.btn {
     margin-left: 45px;
     height: 30px;
     width: 7%;
@@ -69,74 +69,13 @@ p {
     border: 2px solid #A2D9CE;
 }
 
-.btn1:hover {
-    background-color: #DAEAF1;
-}
-
-.btn2 {
-    margin-left: 15px;
-    height: 30px;
-    width: 7%;
-    background-color: #A2D9CE;
-    border: 2px solid #A2D9CE;
-}
-
-.btn2:hover {
-    background-color: #DAEAF1;
-}
-
-.btn3 {
-    margin-left: 15px;
-    height: 30px;
-    width: 7%;
-    background-color: #A2D9CE;
-    border: 2px solid #A2D9CE;
-}
-
-.btn3:hover {
-    background-color: #DAEAF1;
-}
-
-.btn4 {
-    margin-left: 15px;
-    height: 30px;
-    width: 7%;
-    background-color: #A2D9CE;
-    border: 2px solid #A2D9CE;
-}
-
-.btn4:hover {
-    background-color: #DAEAF1;
-}
-
-.btn5 {
-    margin-left: 15px;
-    height: 30px;
-    width: 7%;
-    background-color: #A2D9CE;
-    border: 2px solid #A2D9CE;
-}
-
-.btn5:hover {
-    background-color: #DAEAF1;
-}
-
-.button {
-    margin-top: 45px;
-    margin-left: 30px;
-    height: 30px;
-    width: 7%;
-    background-color: #A2D9CE;
-    border: 2px solid #A2D9CE;
-}
-
-.button:hover {
+.btn:hover {
     background-color: #DAEAF1;
 }
 
 .rrr img {
-    height: 1000px;
-    width: 400px;
+    height: 500px;
+    width: 200px;
     width: auto;
     float: right;
     margin-top: 0;

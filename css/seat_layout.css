@@ -66,8 +66,15 @@ body{
     background-color: rgb(173, 212, 114);
     color: black;
 }
+
+.showcase #avail:hover {
+    cursor: default;
+    background-color: #ffffff;
+    transform: scale(1);
+}
 .showcase .seat:not(.occupied):hover{
     cursor: default;
+    /* background-color: #ffffff; */
     transform: scale(1);
 }
 .showcase {
@@ -111,4 +118,25 @@ p.text span{
     color: white;
     font-size: larger;
     font-weight: bolder;
+}
+#submit {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: rgb(229, 83, 103);
+    font-size: large;
+    padding: 20px;
+    cursor: pointer;
+    width: 100%;
+    /* box-sizing: border-box; */
+}
+
+#submit:hover {
+    border: 2px solid rgb(229, 83, 103);
+    background-color: white;
+    color:rgb(229, 83, 103);
+    transition: 0.5s;
+    /* box-sizing: border-box; */
 }
