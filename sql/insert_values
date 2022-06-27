@@ -1,7 +1,7 @@
- insert into movie (movieID,title,rating) values (1,'RRR',9);
- insert into movie (movieID,title,rating) values (2,'Docter Strange',8);
- insert into movie (movieID,title,rating) values (3,'SpiderMan',9);
-
+ insert into movie (movieID,title,rating) values (1,'RRR',95);
+ insert into movie (movieID,title,rating) values (2,'Doctor Strange',95);
+ insert into movie (movieID,title,rating) values (3,'SpiderMan',91);
+ insert into movie (movieID,title,rating) values (4,'Fantastic Beasts',89);
 
  insert into theatre (theatreID,name) values (1,'PVR');
  insert into theatre (theatreID,name) values (2,'Arjun');
