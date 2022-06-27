@@ -1,0 +1,43 @@
+ insert into movie (movieID,title,rating) values (1,'RRR',9);
+ insert into movie (movieID,title,rating) values (2,'Docter Strange',8);
+ insert into movie (movieID,title,rating) values (3,'SpiderMan',9);
+
+
+ insert into theatre (theatreID,name) values (1,'PVR');
+ insert into theatre (theatreID,name) values (2,'Arjun');
+ insert into theatre (theatreID,name) values (3,'AMB');
+
+
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (1, 'A', 1, 1);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (2, 'B', 1, 1);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (3, 'C', 1, 1);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (4, 'A', 1, 2);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (5, 'B', 1, 2);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (6, 'C', 1, 2);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (7, 'A', 1, 3);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (8, 'B', 1, 3);
+insert into theatre_seat (seatID, seatRow, seatCol, theatreID) values (9, 'C', 1, 3);
+
+
+insert into shows (showID, showDate, startTime, movieID, theatreID) values (1, '2022-06-26', '12:34:45', 1, 1);
+insert into shows (showID, showDate, startTime, movieID, theatreID) values (2, '2022-06-27', '17:23:05', 2, 2);
+insert into shows (showID, showDate, startTime, movieID, theatreID) values (3, '2022-06-28', '20:00:00', 3, 3);
+
+
+insert into user (userID, name, email, password, phone) values (1, 'Vineela', 'vineelak@gmail.com', 'hello20', '9876543210');
+insert into user (userID, name, email, password, phone) values (2, 'Nikhil', 'nikhil@gmail.com', 'hello26', '9876543210');
+insert into user (userID, name, email, password, phone) values (3, 'Manas', 'manas@gmail.com', 'hello31', '9876543210');
+insert into user (userID, name, email, password, phone) values (4, 'Fatima', 'fatima@gmail.com', 'hello10', '9876543210');
+insert into user (userID, name, email, password, phone) values (5, 'Sneha', 'sneha@gmail.com', 'hello32', '9876543210');
+
+
+insert into booking (bookingID, numOfSeats, userID, showID) values (1, 3, 1, 1);
+
+
+insert into show_seat (showseatID, status, showID, seatID, bookingID) values (1, 0, 1, 1, 1);
+insert into show_seat (showseatID, status, showID, seatID, bookingID) values (2, 0, 1, 2, 1);
+insert into show_seat (showseatID, status, showID, seatID, bookingID) values (3, 0, 1, 3, 1);
+
+
+insert into payment (paymentID, amount, time_stamp, paymentMethod, bookingID) values (1, 600, "2017-07-23 13:10:11", 'upi', 1);
+
