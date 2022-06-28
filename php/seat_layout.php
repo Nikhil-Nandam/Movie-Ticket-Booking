@@ -10,48 +10,36 @@
     </head>
     <body>
         <?php
-            function get_booked_seats_list() {
-                $booked_seats = array("A1", "A2", "A3");
-                return $booked_seats;
-            }
-
             $servername = "localhost";
             $username = "root";
             $sql_password = "N1kh1l@mysql";
             $db = "MTB";
-            // Create connection
             $conn = mysqli_connect($servername, $username, $sql_password, $db);
-            // Check connection
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $showID = 1;
+            function get_show_id() {
+                $file = fopen("newfile.txt", "r");
+                $movieID = (int)fgets($file);
+                $button_number = (int)fgets($file);
+                return ($movieID - 1) * 23  + $button_number;
+            }
 
-            $sql = "SELECT seatID FROM show_seat WHERE showID=1;";
+            $showID = get_show_id();
+            
+            $sql = "SELECT seatID FROM show_seat WHERE showID=$showID;";
             $result = mysqli_query($conn, $sql);
             $array = array();
             while ($row = mysqli_fetch_assoc($result)) {
                 array_push($array, $row['seatID']);
             } 
 
-            // print_r($array);
-            $seatID = 1;
+            // $seatID = 1;
             function check_booked($seatID) {
                 global $array;
                 if (in_array($seatID, $array)) {
                     return "seat occupied";
-                } else {
-                    return "seat";
-                }
-            }
-
-            function get_occupied($seat_number) {
-                $booked_seats = get_booked_seats_list();
-                if (in_array($seat_number, $booked_seats)) {
-                    // echo "YES";
-                    return "seat occupied";
-                    // echo "YES";
                 } else {
                     return "seat";
                 }

@@ -88,42 +88,47 @@
     </div>
     <br>
     <p><?php echo $array[0]['name']?></p>
-    <!-- <a href="#"></a> -->
-    <form action="times_and_theatre.php" method="post"></form>
-        <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[0]['theatreID'])[0]['startTime'];?></a></button>
-        <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[0]['theatreID'])[1]['startTime'];?></a></button>
-        <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[0]['theatreID'])[2]['startTime']?></a></button>
-        <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[0]['theatreID'])[3]['startTime']?></a></button>
-        <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[0]['theatreID'])[4]['startTime']?></a></button>
+    <form action="times_and_theatre.php" method="post">
+        <button class="btn" name="button1" value="1"><?php echo get_shows_times($array[0]['theatreID'])[0]['startTime'];?></button>
+        <button class="btn" name="button2" value="2"><?php echo get_shows_times($array[0]['theatreID'])[1]['startTime'];?></button>
+        <button class="btn" name="button3" value="3"><?php echo get_shows_times($array[0]['theatreID'])[2]['startTime'];?></button>
+        <button class="btn" name="button4" value="4"><?php echo get_shows_times($array[0]['theatreID'])[3]['startTime'];?></button>
+        <button class="btn" name="button5" value="5"><?php echo get_shows_times($array[0]['theatreID'])[4]['startTime'];?></button>
     </form>
 
     <p><?php echo $array[1]['name']?></p>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[1]['theatreID'])[0]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[1]['theatreID'])[1]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[1]['theatreID'])[2]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[1]['theatreID'])[3]['startTime'];?></a></button>
+    <form action="times_and_theatre.php" method="post">
+        <button class="btn" name="button6" value="6"><?php echo get_shows_times($array[1]['theatreID'])[0]['startTime'];?></button>
+        <button class="btn" name="button7" value="7"><?php echo get_shows_times($array[1]['theatreID'])[1]['startTime'];?></button>
+        <button class="btn" name="button8" value="8"><?php echo get_shows_times($array[1]['theatreID'])[2]['startTime'];?></button>
+        <button class="btn" name="button9" value="9"><?php echo get_shows_times($array[1]['theatreID'])[3]['startTime'];?></button>
+    </form>
 
     <p><?php echo $array[2]['name']?></p>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[2]['theatreID'])[0]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[2]['theatreID'])[1]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[2]['theatreID'])[2]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[2]['theatreID'])[3]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[2]['theatreID'])[4]['startTime'];?></a></button>
+    <form action="times_and_theatre.php" method="post">
+        <button class="btn" name="button10" value="10"><?php echo get_shows_times($array[2]['theatreID'])[0]['startTime'];?></button>
+        <button class="btn" name="button11" value="11"><?php echo get_shows_times($array[2]['theatreID'])[1]['startTime'];?></button>
+        <button class="btn" name="button12" value="12"><?php echo get_shows_times($array[2]['theatreID'])[2]['startTime'];?></button>
+        <button class="btn" name="button13" value="13"><?php echo get_shows_times($array[2]['theatreID'])[3]['startTime'];?></button>
+        <button class="btn" name="button14" value="14"><?php echo get_shows_times($array[2]['theatreID'])[4]['startTime'];?></button>
+    </form>
 
     <p><?php echo $array[3]['name']?></p>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[3]['theatreID'])[0]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[3]['theatreID'])[1]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[3]['theatreID'])[2]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[3]['theatreID'])[3]['startTime'];?></a></button>
+    <form action="times_and_theatre.php" method="post">
+        <button class="btn" name="button15" value="15"><?php echo get_shows_times($array[3]['theatreID'])[0]['startTime'];?></button>
+        <button class="btn" name="button16" value="16"><?php echo get_shows_times($array[3]['theatreID'])[1]['startTime'];?></button>
+        <button class="btn" name="button17" value="17"><?php echo get_shows_times($array[3]['theatreID'])[2]['startTime'];?></button>
+        <button class="btn" name="button18" value="18"><?php echo get_shows_times($array[3]['theatreID'])[3]['startTime'];?></button>
+    </form>
     
     <p><?php echo $array[4]['name']?></p>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[4]['theatreID'])[0]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[4]['theatreID'])[1]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[4]['theatreID'])[2]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[4]['theatreID'])[3]['startTime'];?></a></button>
-    <button class="btn" type="button" name="button"><a href="seat_layout.php"><?php echo get_shows_times($array[4]['theatreID'])[4]['startTime'];?></a></button>
+    <form action="times_and_theatre.php" method="post">
+        <button class="btn" name="button19" value="19"><?php echo get_shows_times($array[4]['theatreID'])[0]['startTime'];?></button>
+        <button class="btn" name="button20" value="20"><?php echo get_shows_times($array[4]['theatreID'])[1]['startTime'];?></button>
+        <button class="btn" name="button21" value="21"><?php echo get_shows_times($array[4]['theatreID'])[2]['startTime'];?></button>
+        <button class="btn" name="button22" value="22"><?php echo get_shows_times($array[4]['theatreID'])[3]['startTime'];?></button>
+        <button class="btn" name="button23" value="23"><?php echo get_shows_times($array[4]['theatreID'])[4]['startTime'];?></button>
+    </form>
     <br>
-    <br>
-    <button class="btn">Book Tickets</button>
 </body>
 </html>
