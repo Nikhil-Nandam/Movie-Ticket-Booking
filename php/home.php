@@ -28,9 +28,10 @@
         $sql = "SELECT * FROM movie;";
         $result = mysqli_query($conn, $sql);
         $array = array();
-        while ($row=mysqli_fetch_assoc($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
             array_push($array, $row);
         }
+        // print_r($array);
     ?>
     <div class="navbar">
         <div class="container">
@@ -57,7 +58,7 @@
                     <i class="fa fa-heart"><span class="likes"><?php echo $array[0]['rating']?>%</span></i>
                 </div>
                 <form action="test.php" method="post">
-                    <button class="button" name="button1" value="<?php echo $array[0]['title']?>">Book Tickets</button>
+                    <button class="button" name="button1" value="<?php echo $array[0]['movieID']?>">Book Tickets</button>
                 </form>
             </div>
             <div class="image">
@@ -67,7 +68,7 @@
                     <i class="fa fa-heart"><span class="likes"><?php echo $array[1]['rating']?>%</span></i>
                 </div>
                 <form action="test.php" method="post">
-                    <button class="button" name="button2" value="<?php echo $array[1]['title']?>">Book Tickets</button>
+                    <button class="button" name="button2" value="<?php echo $array[1]['movieID']?>">Book Tickets</button>
                 </form>
             </div>
             <div class="image">
@@ -77,7 +78,7 @@
                     <i class="fa fa-heart"><span class="likes"><?php echo $array[2]['rating']?>%</span></i>
                 </div>
                 <form action="test.php" method="post">
-                    <button class="button" name="button3" value="<?php echo $array[2]['title']?>">Book Tickets</button>
+                    <button class="button" name="button3" value="<?php echo $array[2]['movieID']?>">Book Tickets</button>
                 </form>
             
             </div>
@@ -88,7 +89,7 @@
                     <i class="fa fa-heart"><span class="likes"><?php echo $array[3]['rating']?>%</span></i>
                 </div>
                 <form action="test.php" method="post">
-                    <button class="button" name="button4" value="<?php echo $array[3]['title']?>">Book Tickets</button>
+                    <button class="button" name="button4" value="<?php echo $array[3]['movieID']?>">Book Tickets</button>
                 </form>
                 
             </div>

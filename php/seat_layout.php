@@ -15,16 +15,49 @@
                 return $booked_seats;
             }
 
-            function get_occupied($seat_number) {
-                $booked_seats = get_booked_seats_list();
-                if (in_array($seat_number, $booked_seats)) {
+            $servername = "localhost";
+            $username = "root";
+            $sql_password = "N1kh1l@mysql";
+            $db = "MTB";
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $sql_password, $db);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $showID = 1;
+
+            $sql = "SELECT seatID FROM show_seat WHERE showID=1;";
+            $result = mysqli_query($conn, $sql);
+            $array = array();
+            while ($row = mysqli_fetch_assoc($result)) {
+                array_push($array, $row['seatID']);
+            } 
+
+            // print_r($array);
+            $seatID = 1;
+            function check_booked($seatID) {
+                global $array;
+                if (in_array($seatID, $array)) {
                     return "seat occupied";
                 } else {
                     return "seat";
                 }
             }
+
+            function get_occupied($seat_number) {
+                $booked_seats = get_booked_seats_list();
+                if (in_array($seat_number, $booked_seats)) {
+                    // echo "YES";
+                    return "seat occupied";
+                    // echo "YES";
+                } else {
+                    return "seat";
+                }
+            }
+
         ?>
-        <!-- <?php echo get_occupied(true)?> -->
         <ul class="showcase">
             <li>
                 <div id="avail" class="seat"></div>
@@ -42,154 +75,155 @@
         <div class="container">
             <div class="row">
                 <div class="row_">A</div>
-                <!-- <div class="seat">1</div> -->
-                <div class="<?php echo get_occupied("A1")?>">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat occupied">6</div>
-                <div class="seat occupied">7</div>
-                <div class="seat occupied">8</div>
-                <div class="seat">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat occupied">12</div>
+                <div class="<?php echo check_booked(1)?>">1</div>
+                <div class="<?php echo check_booked(2)?>">2</div>
+                <div class="<?php echo check_booked(3)?>">3</div>
+                <div class="<?php echo check_booked(4)?>">4</div>
+                <div class="<?php echo check_booked(5)?>">5</div>
+                <div class="<?php echo check_booked(6)?>">6</div>
+                <div class="<?php echo check_booked(7)?>">7</div>
+                <div class="<?php echo check_booked(8)?>">8</div>
+                <div class="<?php echo check_booked(9)?>">9</div>
+                <div class="<?php echo check_booked(10)?>">10</div>
+                <div class="<?php echo check_booked(11)?>">11</div>
+                <div class="<?php echo check_booked(12)?>">12</div>
             </div>
             <div class="row">
                 <div class="row_">B</div>
-                <div class="seat">1</div>
-                <div class="seat occupied">2</div>
-                <div class="seat occupied">3</div>
-                <div class="seat occupied">4</div>
-                <div class="seat occupied">5</div>
-                <div class="seat occupied">6</div>
-                <div class="seat occupied">7</div>
-                <div class="seat occupied">8</div>
-                <div class="seat occupied">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(13)?>">1</div>
+                <div class="<?php echo check_booked(14)?>">2</div>
+                <div class="<?php echo check_booked(15)?>">3</div>
+                <div class="<?php echo check_booked(16)?>">4</div>
+                <div class="<?php echo check_booked(17)?>">5</div>
+                <div class="<?php echo check_booked(18)?>">6</div>
+                <div class="<?php echo check_booked(19)?>">7</div>
+                <div class="<?php echo check_booked(20)?>">8</div>
+                <div class="<?php echo check_booked(21)?>">9</div>
+                <div class="<?php echo check_booked(22)?>">10</div>
+                <div class="<?php echo check_booked(23)?>">11</div>
+                <div class="<?php echo check_booked(24)?>">12</div>
+
             </div>
             <div class="row">
                 <div class="row_">C</div>
-                <div class="seat occupied">1</div>
-                <div class="seat occupied">2</div>
-                <div class="seat occupied">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat occupied">8</div>
-                <div class="seat occupied">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(25)?>">1</div>
+                <div class="<?php echo check_booked(26)?>">2</div>
+                <div class="<?php echo check_booked(27)?>">3</div>
+                <div class="<?php echo check_booked(28)?>">4</div>
+                <div class="<?php echo check_booked(29)?>">5</div>
+                <div class="<?php echo check_booked(30)?>">6</div>
+                <div class="<?php echo check_booked(31)?>">7</div>
+                <div class="<?php echo check_booked(32)?>">8</div>
+                <div class="<?php echo check_booked(33)?>">9</div>
+                <div class="<?php echo check_booked(34)?>">10</div>
+                <div class="<?php echo check_booked(35)?>">11</div>
+                <div class="<?php echo check_booked(36)?>">12</div>
+
             </div>
             <div class="row">
                 <div class="row_">D</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat">8</div>
-                <div class="seat">9</div>
-                <div class="seat occupied">10</div>
-                <div class="seat occupied">11</div>
-                <div class="seat occupied">12</div>
+                <div class="<?php echo check_booked(37)?>">1</div>
+                <div class="<?php echo check_booked(38)?>">2</div>
+                <div class="<?php echo check_booked(39)?>">3</div>
+                <div class="<?php echo check_booked(40)?>">4</div>
+                <div class="<?php echo check_booked(41)?>">5</div>
+                <div class="<?php echo check_booked(42)?>">6</div>
+                <div class="<?php echo check_booked(43)?>">7</div>
+                <div class="<?php echo check_booked(44)?>">8</div>
+                <div class="<?php echo check_booked(45)?>">9</div>
+                <div class="<?php echo check_booked(46)?>">10</div>
+                <div class="<?php echo check_booked(47)?>">11</div>
+                <div class="<?php echo check_booked(48)?>">12</div>
             </div>
             <div class="row">
                 <div class="row_">E</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat occupied">4</div>
-                <div class="seat occupied">5</div>
-                <div class="seat occupied">6</div>
-                <div class="seat occupied">7</div>
-                <div class="seat occupied">8</div>
-                <div class="seat occupied">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(49)?>">1</div>
+                <div class="<?php echo check_booked(50)?>">2</div>
+                <div class="<?php echo check_booked(51)?>">3</div>
+                <div class="<?php echo check_booked(52)?>">4</div>
+                <div class="<?php echo check_booked(53)?>">5</div>
+                <div class="<?php echo check_booked(54)?>">6</div>
+                <div class="<?php echo check_booked(55)?>">7</div>
+                <div class="<?php echo check_booked(56)?>">8</div>
+                <div class="<?php echo check_booked(57)?>">9</div>
+                <div class="<?php echo check_booked(58)?>">10</div>
+                <div class="<?php echo check_booked(59)?>">11</div>
+                <div class="<?php echo check_booked(60)?>">12</div>
             </div>
             <div class="row row-6">
                 <div class="row_">F</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat">8</div>
-                <div class="seat">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(61)?>">1</div>
+                <div class="<?php echo check_booked(62)?>">2</div>
+                <div class="<?php echo check_booked(63)?>">3</div>
+                <div class="<?php echo check_booked(64)?>">4</div>
+                <div class="<?php echo check_booked(65)?>">5</div>
+                <div class="<?php echo check_booked(66)?>">6</div>
+                <div class="<?php echo check_booked(67)?>">7</div>
+                <div class="<?php echo check_booked(68)?>">8</div>
+                <div class="<?php echo check_booked(69)?>">9</div>
+                <div class="<?php echo check_booked(70)?>">10</div>
+                <div class="<?php echo check_booked(71)?>">11</div>
+                <div class="<?php echo check_booked(72)?>">12</div>
             </div>
             <div class="row">
                 <div class="row_">G</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat">8</div>
-                <div class="seat">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(73)?>">1</div>
+                <div class="<?php echo check_booked(74)?>">2</div>
+                <div class="<?php echo check_booked(75)?>">3</div>
+                <div class="<?php echo check_booked(76)?>">4</div>
+                <div class="<?php echo check_booked(77)?>">5</div>
+                <div class="<?php echo check_booked(78)?>">6</div>
+                <div class="<?php echo check_booked(79)?>">7</div>
+                <div class="<?php echo check_booked(80)?>">8</div>
+                <div class="<?php echo check_booked(81)?>">9</div>
+                <div class="<?php echo check_booked(82)?>">10</div>
+                <div class="<?php echo check_booked(83)?>">11</div>
+                <div class="<?php echo check_booked(84)?>">12</div>
             </div>
             <div class="row">
                 <div class="row_">H</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat">8</div>
-                <div class="seat">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(85)?>">1</div>
+                <div class="<?php echo check_booked(86)?>">2</div>
+                <div class="<?php echo check_booked(87)?>">3</div>
+                <div class="<?php echo check_booked(88)?>">4</div>
+                <div class="<?php echo check_booked(89)?>">5</div>
+                <div class="<?php echo check_booked(90)?>">6</div>
+                <div class="<?php echo check_booked(91)?>">7</div>
+                <div class="<?php echo check_booked(92)?>">8</div>
+                <div class="<?php echo check_booked(93)?>">9</div>
+                <div class="<?php echo check_booked(94)?>">10</div>
+                <div class="<?php echo check_booked(95)?>">11</div>
+                <div class="<?php echo check_booked(96)?>">12</div>
             </div>
             <div class="row">
-                <div  class="row_">I</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat">8</div>
-                <div class="seat">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="row_">I</div>
+                <div class="<?php echo check_booked(97)?>">1</div>
+                <div class="<?php echo check_booked(98)?>">2</div>
+                <div class="<?php echo check_booked(99)?>">3</div>
+                <div class="<?php echo check_booked(100)?>">4</div>
+                <div class="<?php echo check_booked(101)?>">5</div>
+                <div class="<?php echo check_booked(102)?>">6</div>
+                <div class="<?php echo check_booked(103)?>">7</div>
+                <div class="<?php echo check_booked(104)?>">8</div>
+                <div class="<?php echo check_booked(105)?>">9</div>
+                <div class="<?php echo check_booked(106)?>">10</div>
+                <div class="<?php echo check_booked(107)?>">11</div>
+                <div class="<?php echo check_booked(108)?>">12</div>
             </div>
             <div class="row">
                 <div class="row_">J</div>
-                <div class="seat">1</div>
-                <div class="seat">2</div>
-                <div class="seat">3</div>
-                <div class="seat">4</div>
-                <div class="seat">5</div>
-                <div class="seat">6</div>
-                <div class="seat">7</div>
-                <div class="seat">8</div>
-                <div class="seat">9</div>
-                <div class="seat">10</div>
-                <div class="seat">11</div>
-                <div class="seat">12</div>
+                <div class="<?php echo check_booked(109)?>">1</div>
+                <div class="<?php echo check_booked(110)?>">2</div>
+                <div class="<?php echo check_booked(111)?>">3</div>
+                <div class="<?php echo check_booked(112)?>">4</div>
+                <div class="<?php echo check_booked(113)?>">5</div>
+                <div class="<?php echo check_booked(114)?>">6</div>
+                <div class="<?php echo check_booked(115)?>">7</div>
+                <div class="<?php echo check_booked(116)?>">8</div>
+                <div class="<?php echo check_booked(117)?>">9</div>
+                <div class="<?php echo check_booked(118)?>">10</div>
+                <div class="<?php echo check_booked(119)?>">11</div>
+                <div class="<?php echo check_booked(120)?>">12</div>
             </div>
             <div class="screen"></div>
         </div>
