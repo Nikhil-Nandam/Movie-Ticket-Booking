@@ -49,7 +49,6 @@ create table booking (
 
 create table show_seat (
     showseatID int not null primary key,
-    status int not null,
     showID int not null,
     seatID int not null,
     bookingID int not null,
