@@ -218,6 +218,10 @@
         <p class="text">
             You have selected <span id="count">0</span> seats for a price of &#8377; <span id="total">0</span>
         </p>
+        <form id='form' name="seat-layout-form" action="seat_selection.php" method="post" hidden>
+            <!-- <input id="submit" type="submit" value="Book Tickets"> -->
+            <button id="submit" name="submit" value="">Book Tickets</button>
+        </form>
         <script src="../js/seat_layout.js"></script>
     </body>
 </html>

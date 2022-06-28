@@ -1,6 +1,18 @@
 <?php
-    $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
     $showID = "\n";
+    $lines = file('newfile.txt'); 
+    $last = sizeof($lines) - 1;
+    // echo $last;
+    if ($last != 0) {
+        $showID = "";
+        unset($lines[$last]); 
+    }
+    // write the new data to the file 
+    $fp = fopen('newfile.txt', 'w'); 
+    fwrite($fp, implode('', $lines)); 
+    fclose($fp); 
+    $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+    // $showID = "";
     if (isset($_POST['button1'])) {
         $showID .= $_POST['button1'];
     } else if (isset($_POST['button2'])) {
