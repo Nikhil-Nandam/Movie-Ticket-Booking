@@ -1,85 +1,93 @@
-body {
-    background-color: whitesmoke;
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(229, 83, 103);
+    color: white;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.RRRheader{
+    background-color: #333;
+}
+
+h1, h3{
     margin: 0;
 }
 
-.navbar {
-    background-color: black;
-    justify-content: space-between;
+.RRRheader h1{
+    padding-top: 2px;
+    font-style: italic;
+    text-shadow: 0 0 5px white;
+    font-size: 60px;
+    margin-left: 80px;    
 }
-
-.container {
-    max-width: 1500px;
-    margin: auto;
-}
-
-ul {
-    width: 100%;
-    justify-content: space-around;
-    display: flex;
-    list-style: none;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-}
-
-li {
-    box-sizing: border-box;
-    height: 45px;
-    line-height: 45px;
-    font-size: 18px;
-    display: inline-block;
-    border-bottom: 1px solid rgb(229, 83, 103);
-    min-width: 100px;
-    margin: 0px 2rem;
-}
-
-.RRRheader {
-    margin-top: 0;
-    background-color: #F6C6EA;
-}
-
-h1 {
-    margin-left: 100px;
-    text-shadow: 0 0 3px #B20600;
-    font-size: 80px;
-    margin-bottom: 0;
-    font-family: cursive;
-    padding-right: 0;
-}
-
-h3 {
-    margin-left: 110px;
+.RRRheader h3{
+    font-style: italic;
+    font-size: small;
+    margin-left: 82px;   
+    font-weight:normal; 
+    padding-bottom: 5px;
 }
 
 .likes {
     color: red;
 }
 
-p {
-    margin-left: 45px;
-    font-size: 25px;
+.rrr img {
+    height: 600px;
+    width: auto;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.showtimes{
+    margin-left: 30px; 
+    padding: 10px;
+    /* margin-left: 45px; */
 }
 
 .btn {
-    margin-left: 45px;
-    height: 30px;
+    /* margin-left: 45px; */
+    height: 35px;
     width: 7%;
-    background-color: #A2D9CE;
-    border: 2px solid #A2D9CE;
+    background-color: white;
+    border: 1px solid orange;
+    margin-right: 5px;
+    border-radius: 7px;
 }
 
-.btn:hover {
-    background-color: #DAEAF1;
+.btn:not(.book):hover{
+    transform: scale(1.05);
+    background-color: rgb(173, 212, 114);
 }
 
-.rrr img {
-    height: 500px;
-    width: 200px;
-    width: auto;
-    float: right;
-    margin-top: 0;
-    margin-right: 20px;
-    margin-bottom: 30px;
-    margin-left: auto;
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.book.btn{
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 45px;
+    width: 35%;
+    height: 50px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.btn.book:hover {
+    background-color: black;
+    color: rgb(229, 83, 103);
+    /* color: white; */
+}
+
+.showtimes p{
+    font-size: 25px;
+    color: black;
 }
