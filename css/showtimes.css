@@ -9,6 +9,12 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container {
+    /* max-width: 1500px; */
+    max-width: 75%;
+    margin: auto;
+}
+
 .RRRheader{
     background-color: #333;
 }
